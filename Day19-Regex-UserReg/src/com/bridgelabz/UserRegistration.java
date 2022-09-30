@@ -15,13 +15,13 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 
 	//Validate first name
-	public static boolean validateFirstName(String firstName) {
+	public boolean validateFirstName(String firstName) {
 		String nameRegex =  "^[A-Z]{1}[a-z]{2,}$";
 		 return firstName.matches(nameRegex);
 	}
 	
 	//Validate last name
-	public static boolean validateLastName(String lastName) {
+	public boolean validateLastName(String lastName) {
 		String nameRegex =  "^[A-Z]{1}[a-z]{2,}$";
 		 return lastName.matches(nameRegex);
 	}

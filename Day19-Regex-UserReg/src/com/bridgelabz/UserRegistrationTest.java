@@ -7,9 +7,8 @@ import java.util.Scanner;
 
 /**
  * @author Dell
- * As a User need to enter
- * a valid Last
- * Name - Last name
+ * As a User need to follow pre-defined
+ * Mobile Format - E.g. 91 9919819801 - Country code follow by space
  */
 public class UserRegistrationTest {
 
@@ -26,6 +25,9 @@ public class UserRegistrationTest {
 		
 		System.out.println("Enter email address");
 		String emailID=input.nextLine();
+		
+		System.out.println("Enter mobile number");
+		String mobileNumber = input.nextLine();
 		
 		//Checking if first name is valid or not
 		if(userRegistration.validateFirstName(firstName)) {
@@ -50,6 +52,13 @@ public class UserRegistrationTest {
 			System.out.println("Email address is not valid");
 		}
 		
+		
+		//Checking mobile number
+		if(userRegistration.validateMobileNumber(mobileNumber)) {
+			System.out.println("Mobile number is valid");
+		}else {
+			System.out.println("Mobile number is not valid");
+		}
 	}
 
 }

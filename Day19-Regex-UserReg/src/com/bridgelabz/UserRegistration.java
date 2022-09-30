@@ -8,8 +8,7 @@ import java.util.regex.Pattern;
 /**
  * @author Dell
  * As a User need to enter
- * a valid Last
- * Name - Last name
+ * a a valid email address
  *
  */
 public class UserRegistration {

@@ -15,7 +15,7 @@ public class UserRegistrationTest {
 
 	public static void main(String[] args) {
 		
-		UserRegistration userRegistraion = new UserRegistration();
+		UserRegistration userRegistration = new UserRegistration();
 		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter first name");
@@ -24,8 +24,11 @@ public class UserRegistrationTest {
 		System.out.println("Enter last name");
 		String lastName=input.nextLine();
 		
+		System.out.println("Enter email address");
+		String emailID=input.nextLine();
+		
 		//Checking if first name is valid or not
-		if(userRegistraion.validateFirstName(firstName)) {
+		if(userRegistration.validateFirstName(firstName)) {
 			System.out.println("First name is valid");
 		}else {
 			System.out.println("First name is not valid");
@@ -33,12 +36,20 @@ public class UserRegistrationTest {
 		
 		
 		//Checking if last name is valid or not
-		if(userRegistraion.validateLastName(lastName)) {
+		if(userRegistration.validateLastName(lastName)) {
 			System.out.println("Last name is valid");
 		}else {
 			System.out.println("Last name is not valid");
 		}
 
+		
+		//Checking if email Id is valid or not
+		if(userRegistration.validateEmailAddress(emailID)) {
+			System.out.println("Email address is valid");
+		}else {
+			System.out.println("Email address is not valid");
+		}
+		
 	}
 
 }

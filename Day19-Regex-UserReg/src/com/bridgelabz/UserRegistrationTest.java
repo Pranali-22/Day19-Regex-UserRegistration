@@ -7,9 +7,10 @@ import java.util.Scanner;
 
 /**
  * @author Dell
- * As a User need to follow pre-defined
- * Mobile Format - E.g. 91 9919819801 - Country code follow by space
+ * As a User need to follow pre-defined Password rules.
+ * Rule1 – minimum 8 Characters - NOTE – All rules must
  */
+
 public class UserRegistrationTest {
 
 	public static void main(String[] args) {
@@ -28,6 +29,9 @@ public class UserRegistrationTest {
 		
 		System.out.println("Enter mobile number");
 		String mobileNumber = input.nextLine();
+		
+		System.out.println("Enter password");
+		String password = input.nextLine();
 		
 		//Checking if first name is valid or not
 		if(userRegistration.validateFirstName(firstName)) {
@@ -59,6 +63,14 @@ public class UserRegistrationTest {
 		}else {
 			System.out.println("Mobile number is not valid");
 		}
+		
+		//Checking for password
+		if(userRegistration.validatePassword(password)) {
+			System.out.println("Password is valid");
+		}else {
+			System.out.println("Password is not valid");
+		}
+		
 	}
 
 }

@@ -2,15 +2,15 @@
  * 
  */
 package com.bridgelabz;
-import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 /**
  * @author Dell
- * As a User need to follow pre-defined
- * Mobile Format - E.g. 91 9919819801 - Country code follow by space
- *
+ * As a User need to follow pre-defined Password rules.
+ * Rule1 – minimum 8 Characters - NOTE – All rules must
  */
+
 public class UserRegistration {
 
 	//Validate first name
@@ -36,5 +36,11 @@ public class UserRegistration {
 	public boolean validateMobileNumber(String mobileNumber) {
 		String nameRegex = "[0-9]{2} [0-9]{10}$";
 		return mobileNumber.matches(nameRegex);
+	}
+	
+	//Validate password
+	public boolean validatePassword(String password) {
+		String nameRegex = "[a-zA-Z0-9!@#$&*]{8,}$";
+		return password.matches(nameRegex);
 	}
 }

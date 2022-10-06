@@ -7,11 +7,7 @@ import java.util.regex.Pattern;
 
 /**
  * @author Dell
- * As a User need to follow pre-defined Password rules.
- * Rule1 – minimum 8 Characters 
- * Rule2 - Should have at least 1 Upper Case
- * Rule3 – Should have at least 1 numeric number in the password 
- * Rule4 – Has exactly 1 Special Character
+ * Should clear all email samples provided separately
  */
 
 public class UserRegistration {
@@ -30,7 +26,7 @@ public class UserRegistration {
 	
 	//Validate email address
 	public boolean validateEmailAddress(String emailId) {
-		String nameRegex = "^[a-z]{1,}(.[a-z]{1,})?@bl.co(.in)?$";
+		String nameRegex = "^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$";
 		return emailId.matches(nameRegex);
 	}
 

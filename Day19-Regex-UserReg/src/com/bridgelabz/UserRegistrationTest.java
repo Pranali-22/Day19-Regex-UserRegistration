@@ -3,15 +3,13 @@
  */
 package com.bridgelabz;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
  * @author Dell
- * As a User need to follow pre-defined Password rules.
- * Rule1 – minimum 8 Characters 
- * Rule2 - Should have at least 1 Upper Case 
- * Rule3 – Should have at least 1 numeric number in the password 
- * Rule4 – Has exactly 1 Special Character
+ * Should clear all email samples provided separately
  */
 
 public class UserRegistrationTest {
@@ -27,8 +25,6 @@ public class UserRegistrationTest {
 		System.out.println("Enter last name");
 		String lastName=input.nextLine();
 		
-		System.out.println("Enter email address");
-		String emailID=input.nextLine();
 		
 		System.out.println("Enter mobile number");
 		String mobileNumber = input.nextLine();
@@ -53,10 +49,13 @@ public class UserRegistrationTest {
 
 		
 		//Checking if email Id is valid or not
-		if(userRegistration.validateEmailAddress(emailID)) {
-			System.out.println("Email address is valid");
-		}else {
-			System.out.println("Email address is not valid");
+		ArrayList<String> emailList = new ArrayList<String>(Arrays.asList("abc@yahoo.com","abc-100@yahoo.com","abc111@abc.com","abc@1.com","abc","abc@.com.my","abc123@gmail.a","abc123@.com.com","abc@%*.com"));
+		for(String emailID : emailList) {
+			if(userRegistration.validateEmailAddress(emailID)) {
+				System.out.println(emailID + " is valid");
+			}else {
+				System.out.println(emailID + " is not valid");
+			}
 		}
 		
 		
